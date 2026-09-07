@@ -1,0 +1,30 @@
+---
+import { restaurant, directionsUrl, navigation } from '../data/restaurant';
+import Icon from './Icon.astro';
+const {dark=false}=Astro.props;
+const path=Astro.url.pathname;
+---
+<div class="announcement"><span>Open Daily <span class="ann-dot">·</span> {restaurant.hours} <span class="ann-location">· Rajiv Chowk, Tanuku</span></span><a href={directionsUrl} target="_blank" rel="noopener noreferrer">Get Directions <Icon size={14}/></a></div>
+<header id="site-header" class:list={['site-header',{'on-dark':dark}]}>
+ <div class="header-inner">
+  <a class="wordmark" href="/" aria-label="Dawat Family Restaurant home"><span class="wordmark-name">dawat<span class="brand-spark">✳</span></span><span class="wordmark-sub">FAMILY RESTAURANT</span></a>
+  <nav class="desktop-nav" aria-label="Main navigation">{navigation.map(link=><a href={link.href} aria-current={path===link.href ? 'page':undefined}>{link.label}</a>)}</nav>
+  <a class="nav-order" href="/order-online/">ORDER ONLINE <Icon size={17}/></a>
+  <button id="menu-toggle" class="menu-toggle" aria-label="Open navigation" aria-controls="mobile-navigation" aria-expanded="false"><Icon name="menu" size={26}/></button>
+ </div>
+</header>
+<dialog id="mobile-navigation" class="mobile-navigation" aria-label="Main navigation"><div class="mobile-nav-top"><span class="eyebrow">DAWAT · TANUKU</span><button class="icon-button" id="menu-close" aria-label="Close navigation"><Icon name="close" size={28}/></button></div><nav>{navigation.map((link,i)=><a href={link.href} aria-current={path===link.href?'page':undefined}><small>0{i+1}</small>{link.label}<Icon/></a>)}</nav><a class="button" href="/order-online/">Order Online <Icon/></a><p class="mobile-nav-info">Open daily · {restaurant.hours}</p></dialog>
+<div class="mobile-conversion"><a href={`tel:${restaurant.telephone}`}><Icon name="call" size={19}/>Call</a><a href={directionsUrl} target="_blank" rel="noopener noreferrer"><Icon name="pin" size={20}/>Directions</a><a href="/order-online/"><Icon name="bag" size={20}/>Order</a></div>
+<script>
+ const header=document.querySelector<HTMLElement>('#site-header');
+ const updateHeader=()=>header?.classList.toggle('scrolled',window.scrollY>24);
+ updateHeader(); window.addEventListener('scroll',updateHeader,{passive:true});
+ const dialog=document.querySelector<HTMLDialogElement>('#mobile-navigation');
+ const toggle=document.querySelector<HTMLButtonElement>('#menu-toggle');
+ const closeMenu=()=>dialog?.close();
+ toggle?.addEventListener('click',()=>{dialog?.showModal();toggle.setAttribute('aria-expanded','true');document.body.classList.add('dialog-open');});
+ document.querySelector('#menu-close')?.addEventListener('click',closeMenu);
+ dialog?.addEventListener('close',()=>{toggle?.setAttribute('aria-expanded','false');document.body.classList.remove('dialog-open');toggle?.focus();});
+ dialog?.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+ window.matchMedia('(min-width: 1101px)').addEventListener('change',e=>{if(e.matches&&dialog?.open)closeMenu();});
+</script>

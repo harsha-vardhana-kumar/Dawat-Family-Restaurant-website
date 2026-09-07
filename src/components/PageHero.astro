@@ -1,0 +1,5 @@
+---
+import Picture from './Picture.astro';
+const {eyebrow='A TASTE OF DAWAT',title,italic,description,image,compact=false}=Astro.props;
+---
+<section class:list={['page-hero',{'page-hero-image':image,compact}]}><div class="container page-hero-content"><p class="eyebrow">{eyebrow}</p><h1>{title}{italic&&<><br/><em>{italic}</em></>}</h1>{description&&<p class="page-description">{description}</p>}<slot/></div>{image&&<div class="page-hero-photo"><Picture name={image} eager sizes="100vw"/></div>}</section>

@@ -1,0 +1,6 @@
+---
+import {formatPrice, type MenuItem} from '../data/menu';
+interface Props{item:MenuItem;}
+const {item}=Astro.props;
+---
+<div class="menu-item" data-menu-item data-category={item.category} data-diet={item.diet} data-name={item.name.toLowerCase()}><div class="menu-item-main"><span class:list={['diet-icon',item.diet]} aria-label={item.diet==='veg'?'Vegetarian':item.diet==='non-veg'?'Non-vegetarian':'Dietary details: ask us'} title={item.diet==='veg'?'Vegetarian':item.diet==='non-veg'?'Non-vegetarian':'Dietary details: ask us'}>{item.diet==='unspecified'?'?':''}</span><h3>{item.name}</h3>{item.id==='chicken-butter-flux'&&<span class="signature-label">SIGNATURE</span>}</div><span class="menu-price">{formatPrice(item.price)}</span></div>

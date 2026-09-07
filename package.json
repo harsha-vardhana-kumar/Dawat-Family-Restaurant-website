@@ -1,0 +1,14 @@
+{
+  "name": "dawat-family-restaurant",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev --host 0.0.0.0 --port 4173",
+    "build": "astro build",
+    "preview": "astro preview --host 0.0.0.0 --port 4173",
+    "check": "astro check"
+  },
+  "dependencies": { "astro": "^5.13.0", "sharp": "^0.34.3", "@fontsource-variable/manrope": "^5.2.6", "@fontsource/cormorant-garamond": "^5.2.6" },
+  "devDependencies": { "@astrojs/check": "^0.9.4", "typescript": "^5.9.2" }
+}

@@ -1,0 +1,28 @@
+---
+import {gallery,photographs,photoNotice} from '../data/gallery';
+import Picture from './Picture.astro';
+import Icon from './Icon.astro';
+const {preview=false}=Astro.props;
+---
+<div class:list={['gallery-surface',{'gallery-preview':preview}]}>
+{!preview&&<div class="gallery-filters filter-row" role="group" aria-label="Gallery categories">{['All','Biryani','Starters','Main Course','Drinks','Restaurant'].map((label,i)=><button data-gallery-filter={label} aria-pressed={i===0}>{label}</button>)}</div>}
+<div class="gallery-grid">{gallery.map((photo,index)=><figure class={`gallery-tile tile-${index+1}`} data-gallery-category={photo.category} data-reveal>{preview?<a class="gallery-photo" href="/gallery/"><Picture name={photo.id}/><span class="gallery-hover"><Icon name="plus"/></span></a>:<button class="gallery-photo" data-gallery-open data-src={photographs[photo.id].src.src} data-alt={photographs[photo.id].alt} data-caption={photo.label} aria-label={`Open image: ${photo.label}`}><Picture name={photo.id}/><span class="gallery-hover"><Icon name="plus"/></span></button>}<figcaption><span class="eyebrow">{photo.label}</span><span>{photo.title}</span></figcaption></figure>)}</div>
+<p class="image-notice">{photoNotice}</p>
+{!preview&&<><p class="sr-only" id="gallery-status" role="status" aria-live="polite"></p><dialog class="lightbox" id="gallery-lightbox" aria-label="Image gallery"><div class="lightbox-top"><span id="lightbox-caption"></span><button class="icon-button" id="lightbox-close" aria-label="Close image"><Icon name="close" size={28}/></button></div><img id="lightbox-image" alt=""/><div class="lightbox-bottom"><button id="lightbox-prev" class="text-link" aria-label="Previous image">← Previous</button><span id="lightbox-count"></span><button id="lightbox-next" class="text-link" aria-label="Next image">Next →</button></div><p class="image-notice">{photoNotice}</p></dialog></>}
+</div>
+<script>
+ const filterButtons=document.querySelectorAll<HTMLButtonElement>('[data-gallery-filter]');
+ const tiles=document.querySelectorAll<HTMLElement>('[data-gallery-category]');
+ const lightbox=document.querySelector<HTMLDialogElement>('#gallery-lightbox');
+ let activeIndex=0;let opener:HTMLElement|null=null;
+ const visibleButtons=()=>Array.from(document.querySelectorAll<HTMLButtonElement>('[data-gallery-open]')).filter(button=>!button.closest<HTMLElement>('[data-gallery-category]')?.hidden);
+ const showImage=(index:number)=>{const buttons=visibleButtons();if(!buttons.length)return;activeIndex=(index+buttons.length)%buttons.length;const selected=buttons[activeIndex];const image=document.querySelector<HTMLImageElement>('#lightbox-image');if(image){image.src=selected.dataset.src||'';image.alt=selected.dataset.alt||'';}const caption=document.querySelector('#lightbox-caption');if(caption)caption.textContent=selected.dataset.caption||'';const count=document.querySelector('#lightbox-count');if(count)count.textContent=`${activeIndex+1} / ${buttons.length}`;};
+ filterButtons.forEach(button=>button.addEventListener('click',()=>{filterButtons.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));tiles.forEach(tile=>{tile.hidden=button.dataset.galleryFilter!=='All'&&tile.dataset.galleryCategory!==button.dataset.galleryFilter;});const status=document.querySelector('#gallery-status');if(status)status.textContent=`${visibleButtons().length} images shown`; }));
+ document.querySelectorAll<HTMLButtonElement>('[data-gallery-open]').forEach(button=>button.addEventListener('click',()=>{opener=button;showImage(visibleButtons().indexOf(button));lightbox?.showModal();document.body.classList.add('dialog-open');}));
+ document.querySelector('#lightbox-close')?.addEventListener('click',()=>lightbox?.close());
+ document.querySelector('#lightbox-prev')?.addEventListener('click',()=>showImage(activeIndex-1));
+ document.querySelector('#lightbox-next')?.addEventListener('click',()=>showImage(activeIndex+1));
+ lightbox?.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'){e.preventDefault();showImage(activeIndex-1);}if(e.key==='ArrowRight'){e.preventDefault();showImage(activeIndex+1);}});
+ lightbox?.addEventListener('click',e=>{if(e.target===lightbox)lightbox.close();});
+ lightbox?.addEventListener('close',()=>{document.body.classList.remove('dialog-open');opener?.focus();});
+</script>

@@ -1,0 +1,38 @@
+{
+  "provenance": "AI-generated illustrative concepts, created with OpenAI built-in imagegen; not documentary photographs of Dawat premises or dishes.",
+  "requests": 6,
+  "variants": 0,
+  "retries": 0,
+  "assets": [
+    {
+      "name": "mutton-dum-biryani",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium family Indian restaurant website photography. Style/medium: exceptionally appetizing photorealistic editorial photograph with natural material texture and restrained premium styling. Cohesive palette: warm muted burgundy, ivory, copper, dark warm brown. This is an illustrative concept photograph, not a documentary photograph of any real restaurant or its dishes. No text, logos, watermarks, signs, UI, graphics, or people. Primary request: a cinematic mutton dum biryani in a hammered copper pot; tender mutton nestled in fluffy long-grain saffron basmati rice, delicate fried onions and fresh mint. Scene/backdrop: dark warm brown dining background. Composition/framing: landscape 3:2, close editorial food photography, full copper pot visible, delicious food fills much of frame, subject centered slightly to the right. Lighting/mood: soft natural directional light with gentle shadows, warm and deeply appetizing, realistic subtle steam.",
+      "file": "src/assets/biryani.webp"
+    },
+    {
+      "name": "chicken-butter-flux",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium family Indian restaurant website photography. Style/medium: exceptionally appetizing photorealistic editorial photograph with natural material texture and restrained premium styling. Cohesive palette: warm muted burgundy, ivory, copper, dark warm brown. This is an illustrative concept photograph, not a documentary photograph of any real restaurant or its dishes. No text, logos, watermarks, signs, UI, graphics, or people. Primary request: boneless buttery Indian chicken starter, conceptual dish named Chicken Butter Flux, glistening golden chicken pieces lightly coated in rich butter sauce, garnished with crisp curry leaves in a burgundy ceramic dish. Scene/backdrop: rich burgundy textured backdrop. Composition/framing: landscape 3:2, three-quarter close food photograph, dish centered and fully visible, delicate food styling. Lighting/mood: soft warm directional light, tactile appetizing food texture, elegant restraint.",
+      "file": "src/assets/butter-flux.webp"
+    },
+    {
+      "name": "chicken-cheese-balls",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium family Indian restaurant website photography. Style/medium: exceptionally appetizing photorealistic editorial photograph with natural material texture and restrained premium styling. Cohesive palette: warm muted burgundy, ivory, copper, dark warm brown. This is an illustrative concept photograph, not a documentary photograph of any real restaurant or its dishes. No text, logos, watermarks, signs, UI, graphics, or people. Primary request: crisp golden chicken cheese balls with beautifully textured breadcrumb crust, one broken open with a short convincing cheese pull, on an elegant ivory ceramic plate. Scene/backdrop: warm copper tabletop and softly blurred background. Composition/framing: landscape 3:2, close editorial three-quarter view, plate centered with natural breathing space. Lighting/mood: soft warm directional light, appetizing clear golden texture, physically believable cheese.",
+      "file": "src/assets/cheese-balls.webp"
+    },
+    {
+      "name": "irani-chai",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium family Indian restaurant website photography. Style/medium: exceptionally appetizing photorealistic editorial photograph with natural material texture and restrained premium styling. Cohesive palette: warm muted burgundy, ivory, copper, dark warm brown. This is an illustrative concept photograph, not a documentary photograph of any real restaurant or its dishes. No text, logos, watermarks, signs, UI, graphics, or people. Primary request: Irani chai in a small clear glass on a brass saucer with a few buttery biscuits nearby. Scene/backdrop: warm dark evening tabletop, quietly atmospheric, soft restaurant background bokeh. Composition/framing: landscape 3:2, intimate editorial still life, glass centered, enough environment to communicate an evening tea ritual. Lighting/mood: soft warm side light, natural glass highlights, realistic subtle steam, copper warmth.",
+      "file": "src/assets/chai.webp"
+    },
+    {
+      "name": "family-dining-ambience",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium family Indian restaurant website photography. Style/medium: exceptionally appetizing photorealistic editorial photograph with natural material texture and restrained premium styling. Cohesive palette: warm muted burgundy, ivory, copper, dark warm brown. This is an illustrative concept photograph, not a documentary photograph of any real restaurant or its dishes. No text, logos, watermarks, signs, UI, graphics, or people. Primary request: an empty warmly lit elegant contemporary Indian family restaurant interior with dark wood, upholstered burgundy seats, a set round table, soft copper pendant lights. Scene/backdrop: welcoming refined dining room, restrained contemporary details, no extravagant palace theme. Composition/framing: landscape 16:9, architectural editorial photograph at natural seated eye-level, inviting central round table set for a family, visually coherent geometry. Lighting/mood: warm evening pools of light and soft natural ambience. Constraints: no people, no signs, no text, no logos; an illustrative interior concept, not any actual Dawat premises.",
+      "file": "src/assets/ambience.webp"
+    },
+    {
+      "name": "indian-table-spread",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium family Indian restaurant website photography. Style/medium: exceptionally appetizing photorealistic editorial photograph with natural material texture and restrained premium styling. Cohesive palette: warm muted burgundy, ivory, copper, dark warm brown. This is an illustrative concept photograph, not a documentary photograph of any real restaurant or its dishes. No text, logos, watermarks, signs, UI, graphics, or people. Primary request: editorial Indian dining table spread with vibrant paneer curry, tandoori skewers and soft charred naan on an ivory tablecloth. Scene/backdrop: warm elegant dining tabletop with burgundy ceramics and restrained copper accents. Composition/framing: landscape 3:2, oblique overhead editorial photograph, visually balanced arrangement, food fills the frame while each dish remains recognizable. Lighting/mood: warm soft directional light and natural shadows; tactile paneer, charred edges and bread texture, calm premium atmosphere.",
+      "file": "src/assets/table.webp"
+    }
+  ]
+}
