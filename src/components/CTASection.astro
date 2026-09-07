@@ -1,0 +1,5 @@
+---
+import Icon from './Icon.astro';
+const {title='Hungry Yet?',text='There’s a Dawat waiting for you.',primary='Explore Menu',href='/menu/'}=Astro.props;
+---
+<section class="cta-section"><div class="container" data-reveal><p class="eyebrow">MAKE IT A DAWAT</p><h2>{title}</h2><p>{text}</p><div class="button-row"><a class="button" href={href}>{primary}<Icon/></a><a class="button button-outline" href="/order-online/">Order Online <Icon/></a></div></div></section>

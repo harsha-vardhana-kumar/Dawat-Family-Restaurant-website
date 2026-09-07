@@ -1,0 +1,4 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';import PageHero from '../components/PageHero.astro';import SignatureDish from '../components/SignatureDish.astro';import CTASection from '../components/CTASection.astro';import {signatures} from '../data/menu';
+---
+<BaseLayout title="Signature Dishes | Dawat Family Restaurant Tanuku" description="Discover Shadi Ka Mutton Dum Biryani, Chicken Butter Flux, Chicken Cheese Balls and authentic Irani chai — the signatures of Dawat."><PageHero eyebrow="FOUR DISHES. ONE DAWAT." title="The Dishes" italic="People Remember" description="A biryani to gather around. A starter to pass around. A chai to linger over."/><div class="container signature-stories">{signatures.map((dish,index)=><SignatureDish dish={dish} index={index} immersive/>)}</div><CTASection title="Hungry Yet?"/></BaseLayout>

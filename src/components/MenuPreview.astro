@@ -1,0 +1,11 @@
+---
+import {menu,previewTabs} from '../data/menu';
+import MenuCard from './MenuCard.astro';
+import Icon from './Icon.astro';
+---
+<section class="menu-preview section-space"><div class="container"><div class="section-heading"><div><p class="eyebrow">SOMETHING FOR EVERY CRAVING</p><h2>Explore the<br/><em>Dawat Menu</em></h2></div><p>Start with a favourite.<br/>Find a new one.</p></div><div class="preview-tabs filter-row" role="tablist" aria-label="Popular menu categories">{previewTabs.map((tab,i)=><button role="tab" id={`preview-tab-${i}`} aria-controls={`preview-panel-${i}`} aria-selected={i===0} tabindex={i===0?0:-1} data-preview-tab={i}>{tab.label}</button>)}</div>{previewTabs.map((tab,i)=><div class="menu-preview-panel" id={`preview-panel-${i}`} role="tabpanel" aria-labelledby={`preview-tab-${i}`} tabindex="0" hidden={i!==0}>{tab.ids.map(id=>{const item=menu.find(d=>d.id===id);return item&&<MenuCard item={item}/>})}</div>)}<div class="preview-bottom"><a class="text-link" href="/menu/">Explore Full Menu <Icon/></a><p>For signature availability, give us a call.</p></div></div></section>
+<script>
+ const tabs=Array.from(document.querySelectorAll<HTMLButtonElement>('[data-preview-tab]'));
+ const selectTab=(tab:HTMLButtonElement)=>{tabs.forEach(t=>{t.setAttribute('aria-selected',String(t===tab));t.tabIndex=t===tab?0:-1;const panel=document.getElementById(t.getAttribute('aria-controls')||'');if(panel)panel.hidden=t!==tab;});};
+ tabs.forEach((tab,index)=>{tab.addEventListener('click',()=>selectTab(tab));tab.addEventListener('keydown',event=>{let next=index;if(event.key==='ArrowRight')next=(index+1)%tabs.length;else if(event.key==='ArrowLeft')next=(index-1+tabs.length)%tabs.length;else if(event.key==='Home')next=0;else if(event.key==='End')next=tabs.length-1;else return;event.preventDefault();selectTab(tabs[next]);tabs[next].focus();});});
+</script>

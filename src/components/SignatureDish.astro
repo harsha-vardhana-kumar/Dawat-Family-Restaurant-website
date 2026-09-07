@@ -1,0 +1,9 @@
+---
+import Picture from './Picture.astro';
+import Icon from './Icon.astro';
+import {menu,formatPrice} from '../data/menu';
+import {restaurant} from '../data/restaurant';
+const {dish,index=0,immersive=false}=Astro.props;
+const item=dish.menuId?menu.find(i=>i.id===dish.menuId):undefined;
+---
+{immersive ? <section class:list={['signature-story',{'reverse':index%2===1}]} id={dish.id}><div class="signature-story-image" data-reveal><Picture name={dish.image}/><span class="image-index">0{index+1} / 04</span></div><div class="signature-story-copy" data-reveal><p class="eyebrow">{dish.label}</p><h2>{dish.name}</h2><p class="signature-line">{dish.short}</p><p>{dish.description}</p>{item?<p class="signature-price">{formatPrice(item.price)} <span>Non-vegetarian</span></p>:<p class="availability-note">Call us for current pricing and availability.</p>}<a class="text-link" href={item?'/menu/?search='+encodeURIComponent(item.name):`tel:${restaurant.telephone}`}>{item?'Find it on the menu':'Call Dawat'}<Icon/></a></div></section> : <a class:list={['signature-card',`signature-card-${index+1}`]} href={`/signature-dishes/#${dish.id}`} data-reveal><div class="signature-photo"><Picture name={dish.image}/><span class="image-index">0{index+1}</span><span class="image-arrow"><Icon/></span></div><div class="signature-caption"><p class="eyebrow">{dish.label}</p><h3>{dish.name}</h3><p>{dish.short}</p></div></a>}

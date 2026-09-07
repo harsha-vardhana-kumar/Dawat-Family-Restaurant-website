@@ -1,0 +1,24 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { restaurant } from '../data/restaurant';
+interface Props {title:string;description:string;dark?:boolean;schema?:unknown;noindex?:boolean;}
+const {title,description,dark=false,schema,noindex=false}=Astro.props;
+const origin=Astro.site || new URL('https://example.com');
+const canonical=new URL(Astro.url.pathname,origin).href;
+const business={
+ '@context':'https://schema.org', '@type':['Restaurant','LocalBusiness'], '@id':new URL('/#restaurant',origin).href,
+ name:restaurant.name, url:origin.href, telephone:restaurant.telephone,
+ address:{'@type':'PostalAddress',streetAddress:restaurant.street,addressLocality:restaurant.city,addressRegion:restaurant.region,addressCountry:restaurant.country},
+ openingHoursSpecification:{'@type':'OpeningHoursSpecification',dayOfWeek:['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],opens:restaurant.opens,closes:restaurant.closes},
+ servesCuisine:['Indian','Biryani','Chinese'], hasMenu:new URL('/menu/',origin).href,
+};
+---
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#681D23"/><title>{title}</title><meta name="description" content={description}/><link rel="canonical" href={canonical}/><meta property="og:type" content="website"/><meta property="og:site_name" content={restaurant.name}/><meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:url" content={canonical}/><meta property="og:locale" content="en_IN"/><meta name="twitter:card" content="summary"/><meta name="twitter:title" content={title}/><meta name="twitter:description" content={description}/><meta name="robots" content={noindex?'noindex, follow':'index, follow'}/><link rel="icon" href="/favicon.svg" type="image/svg+xml"/><script is:inline type="application/ld+json" set:html={JSON.stringify(business).replace(/</g,'\\u003c')}/>{schema&&<script is:inline type="application/ld+json" set:html={JSON.stringify(schema).replace(/</g,'\\u003c')}/>}</head><body><a class="skip-link" href="#main">Skip to content</a><Header dark={dark}/><main id="main"><slot/></main><Footer/><script>
+ const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
+ if(!reduced.matches&&'IntersectionObserver' in window){
+ const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target);}}),{threshold:.07});
+ document.querySelectorAll('[data-reveal]').forEach(el=>{el.classList.add('will-reveal');observer.observe(el);});
+ }
+ </script></body></html>

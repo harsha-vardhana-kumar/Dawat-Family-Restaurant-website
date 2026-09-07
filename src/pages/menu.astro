@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import MenuCard from '../components/MenuCard.astro';
+import CTASection from '../components/CTASection.astro';
+import Icon from '../components/Icon.astro';
+import {menu,menuCategories,signatures} from '../data/menu';
+import {restaurant} from '../data/restaurant';
+const groups=[...new Set(menu.map(i=>i.group))];
+const schema={'@context':'https://schema.org','@type':'Menu',name:'The Dawat Menu',hasMenuSection:groups.map(group=>({'@type':'MenuSection',name:group,hasMenuItem:menu.filter(i=>i.group===group).map(i=>({'@type':'MenuItem',name:i.name,offers:{'@type':'Offer',price:i.price,priceCurrency:'INR'},...(i.diet==='veg'?{suitableForDiet:'https://schema.org/VegetarianDiet'}:{})}))}))};
+---
+<BaseLayout title="The Dawat Menu | Biryani, Starters & More in Tanuku" description="Explore Dawat’s complete menu with prices: soups, vegetarian and non-vegetarian starters, curries, biryanis, breads, fried rice and snacks." schema={schema}>
+<PageHero eyebrow="BRING YOUR APPETITE" title="The Dawat" italic="Menu" description="From comforting classics to Dawat signatures." compact/>
+<section class="full-menu container"><div class="menu-tools"><div class="menu-tool-top"><label class="search-field"><Icon name="search"/><input id="menu-search" type="search" placeholder="Find your favourite dish…" aria-label="Search the Dawat menu" autocomplete="off"/></label><div class="diet-filters" role="group" aria-label="Dietary preference">{[{id:'all',label:'All'},{id:'veg',label:'Veg'},{id:'non-veg',label:'Non-Veg'}].map((d,i)=><button data-diet-filter={d.id} aria-pressed={i===0}>{i>0&&<span class:list={['diet-icon',d.id]} aria-hidden="true"/>}{d.label}</button>)}</div></div><div class="menu-category-nav filter-row" role="group" aria-label="Menu categories">{menuCategories.map((c,i)=><button data-category-filter={c.id} aria-pressed={i===0}>{c.label}</button>)}</div></div><div class="menu-info"><p id="menu-status" role="status" aria-live="polite">{menu.length} dishes to discover</p><p><span class="diet-icon unspecified" aria-hidden="true">?</span>Dietary details: ask us</p></div><noscript><p class="menu-note">The full menu is available below. Enable JavaScript to search and filter.</p></noscript><div id="menu-results">{groups.map(group=><section class="menu-group" data-menu-group><div class="menu-group-title"><h2>{group.toLowerCase().replace(/\b\w/g,c=>c.toUpperCase())}</h2><span>{menu.filter(i=>i.group===group).length} DISHES</span></div><div class="menu-items">{menu.filter(i=>i.group===group).map(item=><MenuCard item={item}/>)}</div></section>)}</div><div class="menu-empty" id="menu-empty" hidden><p class="eyebrow">LET’S TRY SOMETHING ELSE</p><h2>No dishes found.</h2><p>Try a different dish name or clear your filters.</p><button class="button" id="clear-filters">Show the full menu<Icon/></button></div><aside class="signature-menu-note"><p class="eyebrow">DON’T FORGET THE SIGNATURES</p><h2>There’s more to your Dawat.</h2><p>{signatures.filter(i=>!i.menuId).map(i=>i.name).join(' · ')}</p><a class="text-link" href={`tel:${restaurant.telephone}`}>Call for pricing & availability<Icon/></a></aside></section>
+<CTASection title="A table full of possibilities." text="Pick your favourites. Make it a Dawat." primary="Visit Dawat" href="/contact/"/>
+<script>
+ const search=document.querySelector<HTMLInputElement>('#menu-search');
+ const categoryButtons=Array.from(document.querySelectorAll<HTMLButtonElement>('[data-category-filter]'));
+ const dietButtons=Array.from(document.querySelectorAll<HTMLButtonElement>('[data-diet-filter]'));
+ const items=Array.from(document.querySelectorAll<HTMLElement>('[data-menu-item]'));
+ let category='all';let diet='all';
+ function filterMenu(){const query=search?.value.trim().toLowerCase()||'';let count=0;items.forEach(item=>{const match=(category==='all'||item.dataset.category===category)&&(diet==='all'||item.dataset.diet===diet)&&query.split(/\s+/).every(word=>(item.dataset.name||'').includes(word));item.hidden=!match;if(match)count++;});document.querySelectorAll<HTMLElement>('[data-menu-group]').forEach(group=>{const shown=Array.from(group.querySelectorAll<HTMLElement>('[data-menu-item]')).filter(item=>!item.hidden).length;group.hidden=shown===0;const label=group.querySelector('.menu-group-title>span');if(label)label.textContent=`${shown} ${shown===1?'DISH':'DISHES'}`;});const status=document.querySelector('#menu-status');if(status)status.textContent=`${count} ${count===1?'dish':'dishes'} ${query||category!=='all'||diet!=='all'?'found':'to discover'}`;const empty=document.querySelector<HTMLElement>('#menu-empty');if(empty)empty.hidden=count!==0;}
+ categoryButtons.forEach(button=>button.addEventListener('click',()=>{category=button.dataset.categoryFilter||'all';categoryButtons.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));filterMenu();}));
+ dietButtons.forEach(button=>button.addEventListener('click',()=>{diet=button.dataset.dietFilter||'all';dietButtons.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));filterMenu();}));
+ search?.addEventListener('input',filterMenu);
+ document.querySelector('#clear-filters')?.addEventListener('click',()=>{category='all';diet='all';if(search)search.value='';[...categoryButtons,...dietButtons].forEach(b=>b.setAttribute('aria-pressed',String((b.dataset.categoryFilter||b.dataset.dietFilter)==='all')));filterMenu();search?.focus();});
+ const initialSearch=new URLSearchParams(window.location.search).get('search');if(initialSearch&&search){search.value=initialSearch;filterMenu();}
+</script>
+</BaseLayout>
