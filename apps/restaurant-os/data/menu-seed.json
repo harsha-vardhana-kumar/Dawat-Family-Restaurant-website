@@ -1,0 +1,848 @@
+[
+  {
+    "id": "veg-hot-and-sour-soup",
+    "name": "Veg Hot And Sour Soup",
+    "pricePaise": 14000,
+    "category": "soups",
+    "subcategory": "VEG SOUPS",
+    "diet": "veg",
+    "signature": false
+  },
+  {
+    "id": "veg-manchow-soup",
+    "name": "Veg Manchow Soup",
+    "pricePaise": 14050,
+    "category": "soups",
+    "subcategory": "VEG SOUPS",
+    "diet": "veg",
+    "signature": false
+  },
+  {
+    "id": "veg-sweet-corn-soup",
+    "name": "Veg Sweet Corn Soup",
+    "pricePaise": 14000,
+    "category": "soups",
+    "subcategory": "VEG SOUPS",
+    "diet": "veg",
+    "signature": false
+  },
+  {
+    "id": "veg-lemon-coriander-soup",
+    "name": "Veg Lemon Coriander Soup",
+    "pricePaise": 15000,
+    "category": "soups",
+    "subcategory": "VEG SOUPS",
+    "diet": "veg",
+    "signature": false
+  },
+  {
+    "id": "veg-burnt-garlic-soup",
+    "name": "Veg Burnt Garlic Soup",
+    "pricePaise": 15000,
+    "category": "soups",
+    "subcategory": "VEG SOUPS",
+    "diet": "veg",
+    "signature": false
+  },
+  {
+    "id": "chicken-burnt-garlic-soup",
+    "name": "Chicken Burnt Garlic Soup",
+    "pricePaise": 17000,
+    "category": "soups",
+    "subcategory": "NON VEG SOUPS",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "chicken-hot-and-sour-soup",
+    "name": "Chicken Hot And Sour Soup",
+    "pricePaise": 16000,
+    "category": "soups",
+    "subcategory": "NON VEG SOUPS",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "chicken-manchow-soup",
+    "name": "Chicken Manchow Soup",
+    "pricePaise": 16000,
+    "category": "soups",
+    "subcategory": "NON VEG SOUPS",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "chicken-sweet-corn-soup",
+    "name": "Chicken Sweet Corn Soup",
+    "pricePaise": 16000,
+    "category": "soups",
+    "subcategory": "NON VEG SOUPS",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "chicken-lemon-coriander-soup",
+    "name": "Chicken Lemon Coriander Soup",
+    "pricePaise": 17000,
+    "category": "soups",
+    "subcategory": "NON VEG SOUPS",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "mutton-hot-and-sour-soup",
+    "name": "Mutton Hot And Sour Soup",
+    "pricePaise": 18000,
+    "category": "soups",
+    "subcategory": "NON VEG SOUPS",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "baby-corn-salt-and-pepper",
+    "name": "Baby Corn Salt And Pepper",
+    "pricePaise": 31800,
+    "category": "veg-starters",
+    "subcategory": "VEG STARTERS",
+    "diet": "veg",
+    "signature": false
+  },
+  {
+    "id": "paneer-majestic",
+    "name": "Paneer Majestic",
+    "pricePaise": 34000,
+    "category": "veg-starters",
+    "subcategory": "VEG STARTERS",
+    "diet": "veg",
+    "signature": false
+  },
+  {
+    "id": "chilli-paneer",
+    "name": "Chilli Paneer",
+    "pricePaise": 35000,
+    "category": "veg-starters",
+    "subcategory": "VEG STARTERS",
+    "diet": "veg",
+    "signature": false
+  },
+  {
+    "id": "chilli-mushroom",
+    "name": "Chilli Mushroom",
+    "pricePaise": 36900,
+    "category": "veg-starters",
+    "subcategory": "VEG STARTERS",
+    "diet": "veg",
+    "signature": false
+  },
+  {
+    "id": "veg-crispy",
+    "name": "Veg Crispy",
+    "pricePaise": 28900,
+    "category": "veg-starters",
+    "subcategory": "VEG STARTERS",
+    "diet": "veg",
+    "signature": false
+  },
+  {
+    "id": "chilli-baby-corn",
+    "name": "Chilli Baby Corn",
+    "pricePaise": 31900,
+    "category": "veg-starters",
+    "subcategory": "VEG STARTERS",
+    "diet": "veg",
+    "signature": false
+  },
+  {
+    "id": "baby-corn-manchurian",
+    "name": "Baby Corn Manchurian",
+    "pricePaise": 31900,
+    "category": "veg-starters",
+    "subcategory": "VEG STARTERS",
+    "diet": "veg",
+    "signature": false
+  },
+  {
+    "id": "paneer-tikka",
+    "name": "Paneer Tikka",
+    "pricePaise": 36900,
+    "category": "veg-starters",
+    "subcategory": "VEG STARTERS",
+    "diet": "veg",
+    "signature": false
+  },
+  {
+    "id": "paneer-malai-tikka",
+    "name": "Paneer Malai Tikka",
+    "pricePaise": 36900,
+    "category": "veg-starters",
+    "subcategory": "VEG STARTERS",
+    "diet": "veg",
+    "signature": false
+  },
+  {
+    "id": "mushroom-manchurian",
+    "name": "Mushroom Manchurian",
+    "pricePaise": 36900,
+    "category": "veg-starters",
+    "subcategory": "VEG STARTERS",
+    "diet": "veg",
+    "signature": false
+  },
+  {
+    "id": "chicken-65",
+    "name": "Chicken 65",
+    "pricePaise": 35900,
+    "category": "non-veg-starters",
+    "subcategory": "NON VEG STARTERS",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "chilli-chicken",
+    "name": "Chilli Chicken",
+    "pricePaise": 35900,
+    "category": "non-veg-starters",
+    "subcategory": "NON VEG STARTERS",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "chicken-manchurian",
+    "name": "Chicken Manchurian",
+    "pricePaise": 36900,
+    "category": "non-veg-starters",
+    "subcategory": "NON VEG STARTERS",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "dragon-chicken",
+    "name": "Dragon Chicken",
+    "pricePaise": 36900,
+    "category": "non-veg-starters",
+    "subcategory": "NON VEG STARTERS",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "chicken-butter-flux",
+    "name": "Chicken Butter Flux",
+    "pricePaise": 39900,
+    "category": "non-veg-starters",
+    "subcategory": "NON VEG STARTERS",
+    "diet": "non-veg",
+    "signature": true
+  },
+  {
+    "id": "spicy-chicken-95",
+    "name": "Spicy Chicken 95",
+    "pricePaise": 39900,
+    "category": "non-veg-starters",
+    "subcategory": "NON VEG STARTERS",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "chicken-tangdi-kabab",
+    "name": "Chicken Tangdi Kabab",
+    "pricePaise": 42000,
+    "category": "non-veg-starters",
+    "subcategory": "NON VEG STARTERS",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "chicken-tikka-masala",
+    "name": "Chicken Tikka Masala",
+    "pricePaise": 42000,
+    "category": "non-veg-starters",
+    "subcategory": "NON VEG STARTERS",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "boneless-chicken-curry",
+    "name": "Boneless Chicken Curry",
+    "pricePaise": 35000,
+    "category": "non-veg-starters",
+    "subcategory": "NON VEG STARTERS",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "chicken-majestic",
+    "name": "Chicken Majestic",
+    "pricePaise": 36900,
+    "category": "non-veg-starters",
+    "subcategory": "NON VEG STARTERS",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "chicken-lollipop-dry",
+    "name": "Chicken Lollipop Dry",
+    "pricePaise": 35900,
+    "category": "non-veg-starters",
+    "subcategory": "NON VEG STARTERS",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "tandoori-chicken",
+    "name": "Tandoori Chicken",
+    "pricePaise": 31000,
+    "category": "non-veg-starters",
+    "subcategory": "NON VEG STARTERS",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "chicken-tikka",
+    "name": "Chicken Tikka",
+    "pricePaise": 42000,
+    "category": "non-veg-starters",
+    "subcategory": "NON VEG STARTERS",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "apollo-fish",
+    "name": "Apollo Fish",
+    "pricePaise": 46300,
+    "category": "non-veg-starters",
+    "subcategory": "NON VEG STARTERS",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "chilli-fish",
+    "name": "Chilli Fish",
+    "pricePaise": 46900,
+    "category": "non-veg-starters",
+    "subcategory": "NON VEG STARTERS",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "loose-prawns",
+    "name": "Loose Prawns",
+    "pricePaise": 46900,
+    "category": "non-veg-starters",
+    "subcategory": "NON VEG STARTERS",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "grilled-chicken",
+    "name": "Grilled Chicken",
+    "pricePaise": 75000,
+    "category": "non-veg-starters",
+    "subcategory": "NON VEG STARTERS",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "mix-veg-curry",
+    "name": "Mix Veg Curry",
+    "pricePaise": 26900,
+    "category": "veg-main-course",
+    "subcategory": "VEG MAIN COURSE",
+    "diet": "veg",
+    "signature": false
+  },
+  {
+    "id": "palak-paneer",
+    "name": "Palak Paneer",
+    "pricePaise": 32000,
+    "category": "veg-main-course",
+    "subcategory": "VEG MAIN COURSE",
+    "diet": "veg",
+    "signature": false
+  },
+  {
+    "id": "methi-chaman",
+    "name": "Methi Chaman",
+    "pricePaise": 35900,
+    "category": "veg-main-course",
+    "subcategory": "VEG MAIN COURSE",
+    "diet": "veg",
+    "signature": false
+  },
+  {
+    "id": "mushroom-masala",
+    "name": "Mushroom Masala",
+    "pricePaise": 38900,
+    "category": "veg-main-course",
+    "subcategory": "VEG MAIN COURSE",
+    "diet": "veg",
+    "signature": false
+  },
+  {
+    "id": "baby-corn-curry",
+    "name": "Baby Corn Curry",
+    "pricePaise": 38900,
+    "category": "veg-main-course",
+    "subcategory": "VEG MAIN COURSE",
+    "diet": "veg",
+    "signature": false
+  },
+  {
+    "id": "plain-palak",
+    "name": "Plain Palak",
+    "pricePaise": 26900,
+    "category": "veg-main-course",
+    "subcategory": "VEG MAIN COURSE",
+    "diet": "veg",
+    "signature": false
+  },
+  {
+    "id": "kaju-paneer",
+    "name": "Kaju Paneer",
+    "pricePaise": 37900,
+    "category": "veg-main-course",
+    "subcategory": "VEG MAIN COURSE",
+    "diet": "veg",
+    "signature": false
+  },
+  {
+    "id": "kaju-tomato",
+    "name": "Kaju Tomato",
+    "pricePaise": 37900,
+    "category": "veg-main-course",
+    "subcategory": "VEG MAIN COURSE",
+    "diet": "veg",
+    "signature": false
+  },
+  {
+    "id": "chicken-lollipop-gravy",
+    "name": "Chicken Lollipop Gravy",
+    "pricePaise": 36900,
+    "category": "non-veg-main-course",
+    "subcategory": "NON VEG MAIN COURSE",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "butter-chicken",
+    "name": "Butter Chicken",
+    "pricePaise": 39900,
+    "category": "non-veg-main-course",
+    "subcategory": "NON VEG MAIN COURSE",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "chicken-changezi",
+    "name": "Chicken Changezi",
+    "pricePaise": 39900,
+    "category": "non-veg-main-course",
+    "subcategory": "NON VEG MAIN COURSE",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "achari-chicken",
+    "name": "Achari Chicken",
+    "pricePaise": 39900,
+    "category": "non-veg-main-course",
+    "subcategory": "NON VEG MAIN COURSE",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "kaju-chicken-curry",
+    "name": "Kaju Chicken Curry",
+    "pricePaise": 42000,
+    "category": "non-veg-main-course",
+    "subcategory": "NON VEG MAIN COURSE",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "methi-chicken",
+    "name": "Methi Chicken",
+    "pricePaise": 39900,
+    "category": "non-veg-main-course",
+    "subcategory": "NON VEG MAIN COURSE",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "kadhai-chicken",
+    "name": "Kadhai Chicken",
+    "pricePaise": 41000,
+    "category": "non-veg-main-course",
+    "subcategory": "NON VEG MAIN COURSE",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "andhra-chicken",
+    "name": "Andhra Chicken",
+    "pricePaise": 39900,
+    "category": "non-veg-main-course",
+    "subcategory": "NON VEG MAIN COURSE",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "punjabi-chicken",
+    "name": "Punjabi Chicken",
+    "pricePaise": 42000,
+    "category": "non-veg-main-course",
+    "subcategory": "NON VEG MAIN COURSE",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "prawns-curry",
+    "name": "Prawns Curry",
+    "pricePaise": 41000,
+    "category": "non-veg-main-course",
+    "subcategory": "NON VEG MAIN COURSE",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "tandoori-roti",
+    "name": "Tandoori Roti",
+    "pricePaise": 8000,
+    "category": "breads",
+    "subcategory": "BREADS",
+    "diet": "unspecified",
+    "signature": false
+  },
+  {
+    "id": "butter-roti",
+    "name": "Butter Roti",
+    "pricePaise": 7000,
+    "category": "breads",
+    "subcategory": "BREADS",
+    "diet": "unspecified",
+    "signature": false
+  },
+  {
+    "id": "plain-naan",
+    "name": "Plain Naan",
+    "pricePaise": 5400,
+    "category": "breads",
+    "subcategory": "BREADS",
+    "diet": "unspecified",
+    "signature": false
+  },
+  {
+    "id": "butter-naan",
+    "name": "Butter Naan",
+    "pricePaise": 6500,
+    "category": "breads",
+    "subcategory": "BREADS",
+    "diet": "unspecified",
+    "signature": false
+  },
+  {
+    "id": "garlic-naan",
+    "name": "Garlic Naan",
+    "pricePaise": 7500,
+    "category": "breads",
+    "subcategory": "BREADS",
+    "diet": "unspecified",
+    "signature": false
+  },
+  {
+    "id": "plain-kulcha",
+    "name": "Plain Kulcha",
+    "pricePaise": 7000,
+    "category": "breads",
+    "subcategory": "BREADS",
+    "diet": "unspecified",
+    "signature": false
+  },
+  {
+    "id": "butter-kulcha",
+    "name": "Butter Kulcha",
+    "pricePaise": 8500,
+    "category": "breads",
+    "subcategory": "BREADS",
+    "diet": "unspecified",
+    "signature": false
+  },
+  {
+    "id": "egg-biryani",
+    "name": "Egg Biryani",
+    "pricePaise": 32000,
+    "category": "biryani",
+    "subcategory": "NON VEG BIRYANI",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "chicken-fry-piece-biryani",
+    "name": "Chicken Fry Piece Biryani",
+    "pricePaise": 32900,
+    "category": "biryani",
+    "subcategory": "NON VEG BIRYANI",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "chicken-mughlai-biryani",
+    "name": "Chicken Mughlai Biryani",
+    "pricePaise": 36900,
+    "category": "biryani",
+    "subcategory": "NON VEG BIRYANI",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "chicken-lollipop-biryani",
+    "name": "Chicken Lollipop Biryani",
+    "pricePaise": 36900,
+    "category": "biryani",
+    "subcategory": "NON VEG BIRYANI",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "chicken-special-biryani",
+    "name": "Chicken Special Biryani",
+    "pricePaise": 36900,
+    "category": "biryani",
+    "subcategory": "NON VEG BIRYANI",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "shadi-ka-chicken-dum-biryani",
+    "name": "Shadi Ka Chicken Dum Biryani",
+    "pricePaise": 32900,
+    "category": "biryani",
+    "subcategory": "NON VEG BIRYANI",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "sapon-ka-hyderabadi-chicken-dum-biryani",
+    "name": "Sapon Ka Hyderabadi Chicken Dum Biryani",
+    "pricePaise": 39900,
+    "category": "biryani",
+    "subcategory": "NON VEG BIRYANI",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "chicken-dum-mughlai-biryani",
+    "name": "Chicken Dum Mughlai Biryani",
+    "pricePaise": 36900,
+    "category": "biryani",
+    "subcategory": "NON VEG BIRYANI",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "chicken-tangdi-kabab-biryani",
+    "name": "Chicken Tangdi Kabab Biryani",
+    "pricePaise": 39900,
+    "category": "biryani",
+    "subcategory": "NON VEG BIRYANI",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "mixed-biryani",
+    "name": "Mixed Biryani",
+    "pricePaise": 49900,
+    "category": "biryani",
+    "subcategory": "NON VEG BIRYANI",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "prawns-special-biryani",
+    "name": "Prawns Special Biryani",
+    "pricePaise": 43000,
+    "category": "biryani",
+    "subcategory": "NON VEG BIRYANI",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "veg-special-biryani",
+    "name": "Veg Special Biryani",
+    "pricePaise": 34900,
+    "category": "biryani",
+    "subcategory": "VEG BIRYANI",
+    "diet": "veg",
+    "signature": false
+  },
+  {
+    "id": "kaju-paneer-biryani",
+    "name": "Kaju Paneer Biryani",
+    "pricePaise": 35900,
+    "category": "biryani",
+    "subcategory": "VEG BIRYANI",
+    "diet": "veg",
+    "signature": false
+  },
+  {
+    "id": "mushroom-biryani",
+    "name": "Mushroom Biryani",
+    "pricePaise": 35900,
+    "category": "biryani",
+    "subcategory": "VEG BIRYANI",
+    "diet": "veg",
+    "signature": false
+  },
+  {
+    "id": "baby-corn-biryani",
+    "name": "Baby Corn Biryani",
+    "pricePaise": 35900,
+    "category": "biryani",
+    "subcategory": "VEG BIRYANI",
+    "diet": "veg",
+    "signature": false
+  },
+  {
+    "id": "veg-schezwan-fried-rice",
+    "name": "Veg Schezwan Fried Rice",
+    "pricePaise": 28900,
+    "category": "fried-rice",
+    "subcategory": "VEG FRIED RICE",
+    "diet": "veg",
+    "signature": false
+  },
+  {
+    "id": "kaju-paneer-fried-rice",
+    "name": "Kaju Paneer Fried Rice",
+    "pricePaise": 39900,
+    "category": "fried-rice",
+    "subcategory": "VEG FRIED RICE",
+    "diet": "veg",
+    "signature": false
+  },
+  {
+    "id": "veg-special-fried-rice",
+    "name": "Veg Special Fried Rice",
+    "pricePaise": 39900,
+    "category": "fried-rice",
+    "subcategory": "VEG FRIED RICE",
+    "diet": "veg",
+    "signature": false
+  },
+  {
+    "id": "veg-fried-rice",
+    "name": "Veg Fried Rice",
+    "pricePaise": 26900,
+    "category": "fried-rice",
+    "subcategory": "VEG FRIED RICE",
+    "diet": "veg",
+    "signature": false
+  },
+  {
+    "id": "egg-fried-rice",
+    "name": "Egg Fried Rice",
+    "pricePaise": 26900,
+    "category": "fried-rice",
+    "subcategory": "NON VEG FRIED RICE",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "chicken-tangdi-kabab-fried-rice",
+    "name": "Chicken Tangdi Kabab Fried Rice",
+    "pricePaise": 39900,
+    "category": "fried-rice",
+    "subcategory": "NON VEG FRIED RICE",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "chicken-fried-rice",
+    "name": "Chicken Fried Rice",
+    "pricePaise": 28900,
+    "category": "fried-rice",
+    "subcategory": "NON VEG FRIED RICE",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "chicken-special-fried-rice",
+    "name": "Chicken Special Fried Rice",
+    "pricePaise": 29900,
+    "category": "fried-rice",
+    "subcategory": "NON VEG FRIED RICE",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "chicken-lollipop-fried-rice",
+    "name": "Chicken Lollipop Fried Rice",
+    "pricePaise": 29900,
+    "category": "fried-rice",
+    "subcategory": "NON VEG FRIED RICE",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "prawns-special-fried-rice",
+    "name": "Prawns Special Fried Rice",
+    "pricePaise": 36900,
+    "category": "fried-rice",
+    "subcategory": "NON VEG FRIED RICE",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "mixed-fried-rice",
+    "name": "Mixed Fried Rice",
+    "pricePaise": 39900,
+    "category": "fried-rice",
+    "subcategory": "NON VEG FRIED RICE",
+    "diet": "non-veg",
+    "signature": false
+  },
+  {
+    "id": "salted-french-fries",
+    "name": "Salted French Fries",
+    "pricePaise": 16000,
+    "category": "snacks",
+    "subcategory": "SNACKS",
+    "diet": "unspecified",
+    "signature": false
+  },
+  {
+    "id": "crispy-corn",
+    "name": "Crispy Corn",
+    "pricePaise": 31900,
+    "category": "snacks",
+    "subcategory": "SNACKS",
+    "diet": "unspecified",
+    "signature": false
+  },
+  {
+    "id": "shadi-ka-mutton-dum-biryani",
+    "name": "Shadi Ka Mutton Dum Biryani",
+    "pricePaise": null,
+    "category": "signature-dishes",
+    "subcategory": "Signature Dishes",
+    "diet": "non-veg",
+    "signature": true
+  },
+  {
+    "id": "chicken-cheese-balls",
+    "name": "Chicken Cheese Balls",
+    "pricePaise": null,
+    "category": "signature-dishes",
+    "subcategory": "Signature Dishes",
+    "diet": "non-veg",
+    "signature": true
+  },
+  {
+    "id": "authentic-irani-chai",
+    "name": "Authentic Irani Chai",
+    "pricePaise": null,
+    "category": "signature-dishes",
+    "subcategory": "Signature Dishes",
+    "diet": "unspecified",
+    "signature": true
+  }
+]
