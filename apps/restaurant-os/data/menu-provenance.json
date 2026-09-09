@@ -1,0 +1,9 @@
+{
+  "repository": "harsha-vardhana-kumar/Dawat-Family-Restaurant-website",
+  "commit": "e8cee39a8f89c7880bf6a262c3dfccd6e0e5a1c8",
+  "path": "src/data/menu.ts",
+  "sha256": "783fd1f019763c282e55d9b3c322356236f02a45c58fa44b27c8229378a3897d",
+  "priced": 91,
+  "unpriced": 3,
+  "policy": "One-time import. Database becomes authoritative for this operations application."
+}

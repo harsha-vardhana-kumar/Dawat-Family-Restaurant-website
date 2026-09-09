@@ -1,0 +1,20 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1788877123210,
+      "tag": "0000_safe_jane_foster",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1788878442357,
+      "tag": "0001_immutable_ledgers",
+      "breakpoints": true
+    }
+  ]
+}
